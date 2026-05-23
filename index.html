@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HansTube - Razja Desainer</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body { font-family: 'Space Grotesk', sans-serif; margin: 0; background: #f4f4f4; text-align: center; }
+        header { background: #2e7d32; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .container { padding: 20px; }
+        .video-box { background: white; padding: 15px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        iframe { width: 100%; border-radius: 8px; }
+        footer { margin-top: 20px; color: #666; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <header>
+        <strong>HansTube</strong>
+        <i class="material-icons" onclick="location.reload()">refresh</i>
+    </header>
+    <div class="container">
+        <div class="video-box">
+            <h3>Dakwah Pilihan</h3>
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p>Media Dakwah Terpadu Supri AI</p>
+    </div>
+    <footer>&copy; 2026 Razja Desainer</footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
+</body>
+</html>
