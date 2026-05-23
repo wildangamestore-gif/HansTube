@@ -3,34 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HansTube - Razja Desainer</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Supri Tube - Cahaya Islami Cirebon</title>
     <style>
-        body { font-family: 'Space Grotesk', sans-serif; margin: 0; background: #f4f4f4; text-align: center; }
-        header { background: #2e7d32; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-        .container { padding: 20px; }
-        .video-box { background: white; padding: 15px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        iframe { width: 100%; border-radius: 8px; }
-        footer { margin-top: 20px; color: #666; font-size: 0.8em; }
+        body {
+            background-color: #0f0f0f;
+            color: white;
+            font-family: Roboto, Arial, sans-serif;
+            margin: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #0f0f0f;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid #222;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: red; }
+        .user-menu button {
+            background: #272727; color: white; border: none;
+            padding: 8px 15px; border-radius: 20px; cursor: pointer; margin-left: 5px;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .video-card {
+            background: #0f0f0f;
+            cursor: pointer;
+        }
+        .thumbnail {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #272727;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-info {
+            padding: 10px 0;
+        }
+        .video-title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .video-meta {
+            font-size: 0.85rem;
+            color: #aaa;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <strong>HansTube</strong>
-        <i class="material-icons" onclick="location.reload()">refresh</i>
-    </header>
-    <div class="container">
-        <div class="video-box">
-            <h3>Dakwah Pilihan</h3>
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <p>Media Dakwah Terpadu Supri AI</p>
+
+<header>
+    <div class="logo">Supri Tube</div>
+    <div class="user-menu">
+        <button onclick="alert('Buka Pengaturan')">Pengaturan</button>
+        <button onclick="alert('Login Akun')">Login</button>
+        <button onclick="alert('Berhasil Logout')">Logout</button>
     </div>
-    <footer>&copy; 2026 Razja Desainer</footer>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js');
+</header>
+
+<div class="video-grid" id="mainGrid">
+    <!-- Video 1 -->
+    <div class="video-card">
+        <div class="thumbnail">Video Play</div>
+        <div class="video-info">
+            <div class="video-title">Kajian Islam Cirebon Bagian 1</div>
+            <div class="video-meta">Cahaya Islami • 10rb x ditonton</div>
+        </div>
+    </div>
+    <!-- Video 2 -->
+    <div class="video-card">
+        <div class="thumbnail">Video Play</div>
+        <div class="video-info">
+            <div class="video-title">Kajian Islam Cirebon Bagian 2</div>
+            <div class="video-meta">Cahaya Islami • 5rb x ditonton</div>
+        </div>
+    </div>
+    <!-- Video 3 -->
+    <div class="video-card">
+        <div class="thumbnail">Video Play</div>
+        <div class="video-info">
+            <div class="video-title">Kajian Islam Cirebon Bagian 3</div>
+            <div class="video-meta">Cahaya Islami • 8rb x ditonton</div>
+        </div>
+    </div>
+    <!-- Video 4 -->
+    <div class="video-card">
+        <div class="thumbnail">Video Play</div>
+        <div class="video-info">
+            <div class="video-title">Sejarah Sunan Gunung Jati</div>
+            <div class="video-meta">Cahaya Islami • 20rb x ditonton</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // KODE AKSES YANG ANDA BERIKAN (HANSTUP)
+    const accessKey = "AIzaSyD-ylLqPvsI4ShrooPl_ya9EQ9DwRt25N8";
+
+    // Fungsi untuk menghubungkan ke database video menggunakan key Anda
+    function connectToDatabase() {
+        if(accessKey) {
+            console.log("Koneksi berhasil menggunakan kunci akses: " + accessKey);
+            // Di sini sistem Anda akan mulai menarik daftar video secara otomatis
         }
-    </script>
+    }
+
+    window.onload = connectToDatabase;
+</script>
+
 </body>
 </html>
